@@ -6,5 +6,8 @@ module.exports = {
     testMatch: [
         "**/test/**/*.test.js"
     ],
-    verbose: true
+    verbose: true,
+    //transform: {"\\.js$": ['js-jest']}
+    //transformIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/src/test/SerialTests/"]
+    
 }
