@@ -4,8 +4,9 @@ let projectAdded;
 let isLogout;
 
     beforeAll(async () => {
+        //await page.waitFor(4000);
         await page.goto(URL, { waitUntil: "domcontentloaded" });
-        
+        /*
         //loging in  Different Test Case(Logout)
         await page.waitForSelector('.card-body > .form > .form-group:nth-child(1) > .input-group > .form-control')
         await page.type('.card-body > .form > .form-group:nth-child(1) > .input-group > .form-control','shivang.gupta@paralaxiom.com');
@@ -17,9 +18,11 @@ let isLogout;
         await page.waitForSelector('.col-md-8 > .card > .card-body > .form > .btn')
         await page.click('.col-md-8 > .card > .card-body > .form > .btn')
         await page.waitForNavigation()
-        this.loginCheckUrl = await page.url()
+        this.loginCheckUrl = await page.url()*/
         
         //adding project
+
+        /*
         await page.waitForSelector('.card > .card-body > .d-flex > .d-flex > div:nth-child(2)')
         await page.click('.card > .card-body > .d-flex > .d-flex > div:nth-child(2)')        
         
@@ -29,7 +32,7 @@ let isLogout;
         await page.evaluate(() => {
             const email = document.querySelector('.modal-content .row #exampleFormControlTextarea1');
             email.value = 'description';
-          });
+          });*/
         //await page.waitFor(2000);
 
         //await page.waitForSelector('#exampleModalCenter > div > div > div.modal-footer.ali.mr-4 > button.btn.btn-primary')
@@ -49,7 +52,7 @@ let isLogout;
         //await page.click('button[type="button"].btn-primary')
         //#exampleModalCenter > div > div > div.modal-footer.ali.mr-4 > button.btn.btn-primary
         //const isProjectAddSuc = await page. $('#root > div > div.alert.alert-danger.custom-message-status2c1 > strong'). then (res =>!! res);
-        //page.waitFor(4000);
+        await page.waitFor(4000);
         await page.screenshot({path: 'addingproject.png'});
         /*if(isProjectAddSuc){
             projectAdded = false ;
@@ -65,21 +68,21 @@ let isLogout;
         
         //logout CleanUp
         //Setup and cleanup for every test case
-        await page.evaluate(() => {
+        /*await page.evaluate(() => {
             const button = document.querySelector('.container-fluid > #navbarSupportedContent > .nav > .nav-item > .fas');
             button.click();
           });
         await page.waitForNavigation()
-        this.isLogout = await page.url();  
+        this.isLogout = await page.url();  */
 
     });
 
     describe("Adding Project", () => {
-        test("Login", async () => {
+        /*test("Login", async () => {
             expect(this.loginCheckUrl).toBe("http://168.63.233.7/");
         }, timeout);
 
         test("Logout", async () => {
             expect(this.isLogout).toBe(URL);
-        }, timeout);
+        }, timeout);*/
     });

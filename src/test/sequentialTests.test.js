@@ -1,9 +1,16 @@
+//addingCamera = require('./SerialTests/addingCamera')
+logIn = require('./SerialTests/logIn')
 addingProject = require('./SerialTests/addingProject')
-addingCamera = require('./SerialTests/addingCamera')
+logOut = require('./SerialTests/logOut');
 
 
 //Befoereach Aftereach
 describe('Sequentially run Tests', () => {
+   logIn
    addingProject
-   addingCamera
+   logOut
+
+   //logIn
+   //addingCamera
+   //logOut
 })

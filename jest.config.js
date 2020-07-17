@@ -1,7 +1,7 @@
 module.exports = {
     preset: "jest-puppeteer",
     globals: {
-        URL: "http://168.63.233.7/auth/signin",
+        URL: "http://20.188.101.204/auth/signin",
     },
     testMatch: [
         "**/test/**/*.test.js"
