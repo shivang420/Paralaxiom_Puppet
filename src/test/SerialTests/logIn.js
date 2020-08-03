@@ -2,6 +2,7 @@ const timeout = 10000;
 let loginCheckUrl;
 
     beforeAll(async () => {
+        const page = await browser.newPage();
         await page.goto(URL, { waitUntil: "domcontentloaded" });
         await page.waitForSelector('.card-body > .form > .form-group:nth-child(1) > .input-group > .form-control')
         await page.type('.card-body > .form > .form-group:nth-child(1) > .input-group > .form-control','shivang.gupta@paralaxiom.com');

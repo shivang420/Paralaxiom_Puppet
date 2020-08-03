@@ -2,7 +2,7 @@ module.exports = {
     launch: {
         headless: false,
         args: ['--start-fullscreen'],
-        slowMo: false,
+        slowMo: 50 ,
         devtools: true
     }
 }
